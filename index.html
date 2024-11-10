@@ -2,55 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fitness Tracker & Workout Suggestion</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Fitnees tracker</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Fitness Tracker & Workout Suggestion</h1>
-
-    <div class="tabs">
-      <button class="tab-btn active" data-tab="tracker">Fitness Tracker</button>
-      <button class="tab-btn" data-tab="workout">Workout Suggestion</button>
+  <section id="nav">
+    <div class="container">
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          <img src="./images/fitness-gym-svgrepo-com.svg" height="40px" width="30px" alt="">
+          <span class="fs-4"> FITNESS</span>
+        </a>
+  
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="#home" class="nav-link active" aria-current="page">Home</a></li>
+          <li class="nav-item"><a href="#Features" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="./about.html" class="nav-link">About</a></li>
+        </ul>
+      </header>
     </div>
-
-    <!-- Fitness Tracker Section -->
-    <div class="tab-content" id="tracker">
-      <form id="activityForm">
-        <input type="text" id="activity" placeholder="Activity (e.g., Running)" required>
-        <input type="number" id="activityDuration" placeholder="Duration (in minutes)" required>
-        <input type="date" id="activityDate" required>
-        <button type="submit">Add Activity</button>
-      </form>
-
-      <h2>Your Activities</h2>
-      <ul id="activityList"></ul>
-    </div>
-
-    <!-- Workout Suggestion Section -->
-    <div class="tab-content hidden" id="workout">
-      <form id="workoutForm">
-        <label for="workoutType">Select Workout Type:</label>
-        <select id="workoutType" required>
-          <option value="cardio">Cardio</option>
-          <option value="strength">Strength</option>
-          <option value="flexibility">Flexibility</option>
-        </select>
-
-        <label for="workoutDuration">Duration (in minutes):</label>
-        <input type="number" id="workoutDurationInput" min="5" max="60" required>
-
-        <button type="submit">Get Workout</button>
-      </form>
-
-      <div id="suggestion" class="suggestion-box">
-        <h2>Your Workout</h2>
-        <p id="workoutDisplay">Select options to get a suggestion!</p>
+  </section>
+  <section id="home">
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="./images/fitness collage.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">FITNESS tracker</h1>
+          <p class="lead">Our fitness tracker website helps users monitor their daily activity levels and offers personalized exercise suggestions. It tracks metrics like steps, calories burned, and workout duration to give users insights into their progress. The exercise suggestion feature recommends workouts tailored to each user's fitness level and goals, making it easy to stay on track.</p>
+          
+        </div>
       </div>
     </div>
-  </div>
-
-  <script src="./index.js"></script>
+  </section>
+  <section id="Features">
+    <h2 class="feature-heading">Features</h2>
+    <div class="feature-fitness">
+      <div class="card">
+        <img src="./images/fitness tracker.avif" height="300px" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Fitness tracker</h5>
+          <p class="card-text">Our fitness tracker monitors daily activities, tracking metrics like steps, calories, and workout duration to give users a complete overview of their fitness progress.</p>
+          <a href="./tracker.html" class="btn btn-primary">Go</a>
+        </div>
+      </div>
+    
+      <div class="card">
+        <img src="./images/fitness exercise.jpg" height="300px" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Exercise suggestion</h5>
+          <p class="card-text">The exercise suggestion feature recommends personalized workouts based on users' activity levels and fitness goals, making it easy to stay motivated and progress effectively.</p>
+          <a href="./exercise.html" class="btn btn-primary">Go</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
+<section id="footer">
+  <footer class="footer">
+      <p style="color: aliceblue;" >© Byte-Sized Developers</p>
+    </footer>
+</section>
 </html>
